@@ -10,7 +10,11 @@
     <arg name="parallel" value="8"/>
 
     <!-- inherit rules from: -->
-    <rule ref="Mimmi20CodingStandard"/>
+    <rule ref="Mimmi20CodingStandard">
+        <exclude name="SlevomatCodingStandard.Functions.FunctionLength.FunctionLength"/>
+        <exclude name="SlevomatCodingStandard.Complexity.Cognitive.ComplexityTooHigh"/>
+        <exclude name="Generic.Metrics.CyclomaticComplexity.TooHigh"/>
+    </rule>
 
     <!-- Paths to check -->
     <file>src</file>
