@@ -61,7 +61,7 @@ jobs:
 
     continue-on-error: false
 
-    needs: "validate"
+    needs: "analytics"
 
     strategy:
       fail-fast: false
@@ -166,7 +166,7 @@ jobs:
   code-coverage:
     name: "Code Coverage with PHPUnit"
 
-    needs: "tests"
+    needs: "analytics"
 
     runs-on: "${{ matrix.operating-system }}"
 
@@ -244,8 +244,8 @@ jobs:
     if: always()
 
     needs:
+      - "tests"
       - "code-coverage"
-      # - "integration-tests"
 
     steps:
       - name: Successful run
