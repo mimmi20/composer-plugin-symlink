@@ -1,8 +1,8 @@
 {
     "name": "mimmi20/composer-plugin-symlink",
-    "description": "Provides a GitHub repository composer-plugin-symlink for a PHP library, using GitHub actions.",
+    "description": "Provides a Composer Plugin to create symlinks",
     "license": "MIT",
-    "type": "library",
+    "type": "composer-plugin",
     "authors": [
         {
             "name": "Thomas Müller",
