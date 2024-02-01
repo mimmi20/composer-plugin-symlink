@@ -7,9 +7,11 @@
 ## Code Status
 
 [![codecov](https://codecov.io/gh/mimmi20/composer-plugin-symlink/branch/master/graph/badge.svg)](https://codecov.io/gh/mimmi20/composer-plugin-symlink)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/b3eb8bcd052bd07faa6a/test_coverage)](https://codeclimate.com/github/mimmi20/composer-plugin-symlink/test_coverage)
 [![Average time to resolve an issue](https://isitmaintained.com/badge/resolution/mimmi20/composer-plugin-symlink.svg)](https://isitmaintained.com/project/mimmi20/composer-plugin-symlink "Average time to resolve an issue")
 [![Percentage of issues still open](https://isitmaintained.com/badge/open/mimmi20/composer-plugin-symlink.svg)](https://isitmaintained.com/project/mimmi20/composer-plugin-symlink "Percentage of issues still open")
 [![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fmimmi20%2Fcomposer-plugin-symlink%2Fmaster)](https://dashboard.stryker-mutator.io/reports/github.com/mimmi20/composer-plugin-symlink/master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b3eb8bcd052bd07faa6a/maintainability)](https://codeclimate.com/github/mimmi20/composer-plugin-symlink/maintainability)
 
 ## Requirements
 
