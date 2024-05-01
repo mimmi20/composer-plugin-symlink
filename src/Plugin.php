@@ -92,7 +92,11 @@ final class Plugin implements Capable, EventSubscriberInterface, PluginInterface
         ];
     }
 
-    /** @throws RuntimeException */
+    /**
+     * @throws RuntimeException
+     *
+     * @api
+     */
     public function processEvent(Event $event): void
     {
         $installer = new AssetsInstaller($event->getComposer(), $event->getIO(), new Filesystem());

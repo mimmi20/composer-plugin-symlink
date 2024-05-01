@@ -45,16 +45,22 @@ use function unlink;
 
 final class AssetsInstaller
 {
+    /** @api */
     public const VENDOR_DIR_KEY = 'vendor-dir';
 
+    /** @api */
     public const ASSETS_STRATEGY = 'assets-strategy';
 
+    /** @api */
     public const ASSETS_FILES = 'assets-files';
 
+    /** @api */
     public const STRATEGY_AUTO = 'auto';
 
+    /** @api */
     public const STRATEGY_COPY = 'copy';
 
+    /** @api */
     public const STRATEGY_SYMLINK = 'symlink';
 
     /** @throws void */
