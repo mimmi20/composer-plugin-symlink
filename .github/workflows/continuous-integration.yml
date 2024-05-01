@@ -186,7 +186,7 @@ jobs:
         run: "vendor/bin/infection --show-mutations --only-covered --min-covered-msi=65 --min-msi=65 --coverage=.build/coverage --logger-github --no-progress -vv"
 
       - name: "Upload coverage to Codeclimate"
-        uses: "paambaati/codeclimate-action@v5.0.0"
+        uses: "paambaati/codeclimate-action@v6.0.0"
         env:
           CC_TEST_REPORTER_ID: "${{ secrets.CODECLIMATE_API_KEY }}"
         with:
