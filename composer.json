@@ -32,7 +32,7 @@
     "ext-tokenizer": "*",
     "ext-xml": "*",
     "ext-xmlwriter": "*",
-    "composer/composer": "^2.7.6",
+    "composer/composer": "^2.7.7",
     "infection/infection": "^0.29.0",
     "mikey179/vfsstream": "^1.6.11",
     "mimmi20/coding-standard": "^5.2.33",
