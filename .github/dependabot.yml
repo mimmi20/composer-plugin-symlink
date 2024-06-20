@@ -64,6 +64,7 @@ updates:
       - dependency-name: "symfony/http-foundation"
       - dependency-name: "psr/log"
       - dependency-name: "browscap/browscap"
+      - dependency-name: "symfony/filesystem"
 
     # Disable rebasing for all pull requests
     rebase-strategy: "disabled"
@@ -124,6 +125,7 @@ updates:
   #    - dependency-name: "symfony/http-foundation"
   #    - dependency-name: "psr/log"
   #    - dependency-name: "browscap/browscap"
+  #    - dependency-name: "symfony/filesystem"
   #
   #  # Disable rebasing for all pull requests
   #  rebase-strategy: "disabled"
