@@ -61,6 +61,7 @@ updates:
       - dependency-name: "laminas/laminas-diactoros"
       - dependency-name: "laminas/laminas-servicemanager"
       - dependency-name: "nikic/php-parser"
+      - dependency-name: "phpunit/phpunit"
       - dependency-name: "predis/predis"
       - dependency-name: "psr/container"
       - dependency-name: "psr/http-message"
