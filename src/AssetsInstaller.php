@@ -65,7 +65,7 @@ final class AssetsInstaller
 
     /** @throws void */
     public function __construct(
-        private Composer $composer,
+        private readonly Composer $composer,
         private readonly IOInterface $io,
         private readonly Filesystem $filesystem,
     ) {
