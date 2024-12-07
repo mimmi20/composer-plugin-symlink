@@ -14,6 +14,7 @@ declare(strict_types = 1);
 namespace Mimmi20\CopyPlugin;
 
 use Composer\Command\BaseCommand;
+use Override;
 use PHPUnit\Framework\Exception;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Exception\LogicException;
@@ -23,6 +24,7 @@ final class CommandProviderTest extends TestCase
     private CommandProvider $object;
 
     /** @throws void */
+    #[Override]
     protected function setUp(): void
     {
         $this->object = new CommandProvider();

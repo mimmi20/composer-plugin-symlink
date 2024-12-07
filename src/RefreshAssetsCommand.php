@@ -15,6 +15,7 @@ namespace Mimmi20\CopyPlugin;
 
 use Composer\Command\BaseCommand;
 use Composer\Util\Filesystem;
+use Override;
 use RuntimeException;
 use Symfony\Component\Console\Exception\InvalidArgumentException;
 use Symfony\Component\Console\Input\InputInterface;
@@ -26,6 +27,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 final class RefreshAssetsCommand extends BaseCommand
 {
     /** @throws InvalidArgumentException */
+    #[Override]
     protected function configure(): void
     {
         $this->setName('refresh-assets');
@@ -36,6 +38,7 @@ final class RefreshAssetsCommand extends BaseCommand
      *
      * @phpcsSuppress SlevomatCodingStandard.Functions.UnusedParameter.UnusedParameter
      */
+    #[Override]
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $composer = $this->requireComposer();

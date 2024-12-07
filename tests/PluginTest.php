@@ -15,6 +15,7 @@ namespace Mimmi20\CopyPlugin;
 
 use Composer\Plugin\Capability\CommandProvider as CommandProviderInterface;
 use Composer\Script\ScriptEvents;
+use Override;
 use PHPUnit\Framework\Exception;
 use PHPUnit\Framework\TestCase;
 
@@ -23,6 +24,7 @@ final class PluginTest extends TestCase
     private Plugin $object;
 
     /** @throws void */
+    #[Override]
     protected function setUp(): void
     {
         $this->object = new Plugin();

@@ -22,6 +22,7 @@ use Composer\Plugin\PluginInterface;
 use Composer\Script\Event;
 use Composer\Script\ScriptEvents;
 use Composer\Util\Filesystem;
+use Override;
 use RuntimeException;
 
 final class Plugin implements Capable, EventSubscriberInterface, PluginInterface
@@ -31,6 +32,7 @@ final class Plugin implements Capable, EventSubscriberInterface, PluginInterface
      *
      * @phpcsSuppress SlevomatCodingStandard.Functions.UnusedParameter.UnusedParameter
      */
+    #[Override]
     public function activate(Composer $composer, IOInterface $io): void
     {
         // do nothing
@@ -47,6 +49,7 @@ final class Plugin implements Capable, EventSubscriberInterface, PluginInterface
      *
      * @phpcsSuppress SlevomatCodingStandard.Functions.UnusedParameter.UnusedParameter
      */
+    #[Override]
     public function deactivate(Composer $composer, IOInterface $io): void
     {
         // do nothing
@@ -61,6 +64,7 @@ final class Plugin implements Capable, EventSubscriberInterface, PluginInterface
      *
      * @phpcsSuppress SlevomatCodingStandard.Functions.UnusedParameter.UnusedParameter
      */
+    #[Override]
     public function uninstall(Composer $composer, IOInterface $io): void
     {
         // do nothing
@@ -72,6 +76,7 @@ final class Plugin implements Capable, EventSubscriberInterface, PluginInterface
      *
      * @throws void
      */
+    #[Override]
     public function getCapabilities(): array
     {
         return [
@@ -85,6 +90,7 @@ final class Plugin implements Capable, EventSubscriberInterface, PluginInterface
      *
      * @throws void
      */
+    #[Override]
     public static function getSubscribedEvents(): array
     {
         return [
