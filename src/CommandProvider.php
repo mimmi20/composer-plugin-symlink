@@ -14,6 +14,7 @@ declare(strict_types = 1);
 namespace Mimmi20\CopyPlugin;
 
 use Composer\Plugin\Capability\CommandProvider as CommandProviderInterface;
+use Override;
 use Symfony\Component\Console\Exception\LogicException;
 
 final class CommandProvider implements CommandProviderInterface
@@ -24,6 +25,7 @@ final class CommandProvider implements CommandProviderInterface
      *
      * @throws LogicException
      */
+    #[Override]
     public function getCommands(): array
     {
         return [

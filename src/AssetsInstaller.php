@@ -44,32 +44,29 @@ use function stream_copy_to_stream;
 use function stream_is_local;
 use function unlink;
 
-final class AssetsInstaller
+final readonly class AssetsInstaller
 {
     /** @api */
-    public const VENDOR_DIR_KEY = 'vendor-dir';
+    public const string VENDOR_DIR_KEY = 'vendor-dir';
 
     /** @api */
-    public const ASSETS_STRATEGY = 'assets-strategy';
+    public const string ASSETS_STRATEGY = 'assets-strategy';
 
     /** @api */
-    public const ASSETS_FILES = 'assets-files';
+    public const string ASSETS_FILES = 'assets-files';
 
     /** @api */
-    public const STRATEGY_AUTO = 'auto';
+    public const string STRATEGY_AUTO = 'auto';
 
     /** @api */
-    public const STRATEGY_COPY = 'copy';
+    public const string STRATEGY_COPY = 'copy';
 
     /** @api */
-    public const STRATEGY_SYMLINK = 'symlink';
+    public const string STRATEGY_SYMLINK = 'symlink';
 
     /** @throws void */
-    public function __construct(
-        private readonly Composer $composer,
-        private readonly IOInterface $io,
-        private readonly Filesystem $filesystem,
-    ) {
+    public function __construct(private Composer $composer, private IOInterface $io, private Filesystem $filesystem)
+    {
         // nothing to do
     }
 
