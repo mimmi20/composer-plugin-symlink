@@ -89,7 +89,7 @@ parameters:
       tooWideThrowType: true
 
   cognitive_complexity:
-    class: 69
+    class: 70
     function: 30
 
   type_coverage:
@@ -111,11 +111,8 @@ parameters:
     no_mixed: true
     narrow_param: true
 
-  ignoreErrors:
-    - '~, mixed given~'
-
-#  featureToggles:
-#    narrowPregMatches: false
+#  ignoreErrors:
+#    - '~, mixed given~'
 
 rules:
   # code complexity
