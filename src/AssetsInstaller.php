@@ -3,7 +3,7 @@
 /**
  * This file is part of the mimmi20/composer-plugin-symlink package.
  *
- * Copyright (c) 2023-2024, Thomas Mueller <mimmi20@live.de>
+ * Copyright (c) 2023-2025, Thomas Mueller <mimmi20@live.de>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -122,6 +122,8 @@ final readonly class AssetsInstaller
             }
 
             foreach ((array) $publicPath as $singlePath) {
+                assert(is_string($singlePath) || is_int($singlePath));
+
                 if (is_int($singlePath)) {
                     $this->io->writeError(
                         sprintf('<fg=red>File/Directory \'%s\' is invalid.</>', $singlePath),
@@ -130,7 +132,7 @@ final readonly class AssetsInstaller
                     continue;
                 }
 
-                if (isset($results[$singlePath])) {
+                if (array_key_exists($singlePath, $results) && is_string($results[$singlePath])) {
                     $this->io->writeError(
                         sprintf(
                             '<fg=red>File/Directory \'%s\' is already used for file %s.</>',
@@ -154,7 +156,7 @@ final readonly class AssetsInstaller
     {
         $strategy = $config->get(self::ASSETS_STRATEGY);
 
-        if ($strategy === null) {
+        if (!is_string($strategy)) {
             $strategy = self::STRATEGY_AUTO;
         }
 
