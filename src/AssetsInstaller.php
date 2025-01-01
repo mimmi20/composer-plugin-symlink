@@ -26,6 +26,7 @@ use SplFileInfo;
 use Symfony\Component\Filesystem\Exception\IOException;
 use UnexpectedValueException;
 
+use function array_key_exists;
 use function assert;
 use function dirname;
 use function file_exists;
@@ -35,6 +36,7 @@ use function is_array;
 use function is_dir;
 use function is_int;
 use function is_link;
+use function is_string;
 use function mkdir;
 use function rmdir;
 use function rtrim;
