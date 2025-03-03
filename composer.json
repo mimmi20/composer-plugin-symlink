@@ -34,7 +34,7 @@
     "ext-xmlwriter": "*",
     "composer/composer": "^2.8.6",
     "composer/pcre": "^3.3.2",
-    "infection/infection": "^0.29.13",
+    "infection/infection": "^0.29.14",
     "mikey179/vfsstream": "^1.6.12",
     "mimmi20/coding-standard": "^6.0.15",
     "nikic/php-parser": "^5.4.0",
