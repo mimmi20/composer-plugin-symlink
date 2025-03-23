@@ -18,6 +18,7 @@ use Composer\Config;
 use Composer\IO\IOInterface;
 use Composer\Util\Filesystem;
 use org\bovigo\vfs\vfsStream;
+use PHPUnit\Framework\MockObject\Exception;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
 
@@ -25,7 +26,10 @@ use function sprintf;
 
 final class AssetsInstallerTest extends TestCase
 {
-    /** @throws RuntimeException */
+    /**
+     * @throws RuntimeException
+     * @throws Exception
+     */
     public function testProcessInvalidStrategy(): void
     {
         $strategy = 'abc';
@@ -59,7 +63,10 @@ final class AssetsInstallerTest extends TestCase
         $object->process();
     }
 
-    /** @throws RuntimeException */
+    /**
+     * @throws RuntimeException
+     * @throws Exception
+     */
     public function testProcessInvalidAssetsFiles(): void
     {
         $assetFiles = 'abc';
@@ -106,7 +113,10 @@ final class AssetsInstallerTest extends TestCase
         $object->process();
     }
 
-    /** @throws RuntimeException */
+    /**
+     * @throws RuntimeException
+     * @throws Exception
+     */
     public function testProcessNoAssets(): void
     {
         $config  = $this->createMock(Config::class);
@@ -148,7 +158,10 @@ final class AssetsInstallerTest extends TestCase
         $object->process();
     }
 
-    /** @throws RuntimeException */
+    /**
+     * @throws RuntimeException
+     * @throws Exception
+     */
     public function testProcessDuplicateAssetsAndSourceNotFound(): void
     {
         $file        = 'jquery.js';
@@ -296,7 +309,10 @@ final class AssetsInstallerTest extends TestCase
         $object->process();
     }
 
-    /** @throws RuntimeException */
+    /**
+     * @throws RuntimeException
+     * @throws Exception
+     */
     public function testProcessCopy(): void
     {
         $file              = 'jquery.js';
@@ -437,7 +453,10 @@ final class AssetsInstallerTest extends TestCase
         $object->process();
     }
 
-    /** @throws RuntimeException */
+    /**
+     * @throws RuntimeException
+     * @throws Exception
+     */
     public function testProcessSymlink(): void
     {
         $file              = 'jquery.js';

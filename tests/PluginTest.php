@@ -15,25 +15,15 @@ namespace Mimmi20\CopyPlugin;
 
 use Composer\Plugin\Capability\CommandProvider as CommandProviderInterface;
 use Composer\Script\ScriptEvents;
-use Override;
 use PHPUnit\Framework\Exception;
 use PHPUnit\Framework\TestCase;
 
 final class PluginTest extends TestCase
 {
-    private Plugin $object;
-
-    /** @throws void */
-    #[Override]
-    protected function setUp(): void
-    {
-        $this->object = new Plugin();
-    }
-
     /** @throws Exception */
     public function testGetSubscribedEvents(): void
     {
-        $events = $this->object->getSubscribedEvents();
+        $events = (new Plugin())->getSubscribedEvents();
 
         self::assertCount(2, $events);
         self::assertArrayHasKey(ScriptEvents::POST_UPDATE_CMD, $events);
@@ -43,7 +33,7 @@ final class PluginTest extends TestCase
     /** @throws Exception */
     public function testGetCapabilities(): void
     {
-        $capabilities = $this->object->getCapabilities();
+        $capabilities = (new Plugin())->getCapabilities();
 
         self::assertCount(1, $capabilities);
         self::assertArrayHasKey(CommandProviderInterface::class, $capabilities);
